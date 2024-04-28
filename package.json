@@ -1,7 +1,7 @@
 {
-  "name": "@justlep/camo",
-  "version": "1.0.1",
-  "description": "A class-based Object-Document Mapper (ODM) for NeDB",
+  "name": "@alexstormwood/camo-multi",
+  "version": "1.1.0",
+  "description": "A class-based Object-Document Mapper (ODM) for NeDB, with support for disconnecting and reconnecting to databases during an app's runtime.",
   "type": "module",
   "main": "index.js",
   "engines": {
@@ -15,8 +15,17 @@
     "test:persistent-nedb-justlep": "npm --nedb_version=justlep --nedb_persistent=true run test",
     "lint": "eslint --max-warnings 5 --ext .js index.js lib/ test/"
   },
-  "author": "Lennart Pegel <github@justlep.net>",
+  "author": {
+    "name": "Alex Stormwood",
+    "email": "alex@bigfootds.com",
+    "url": "https://github.com/AlexStormwood/camo-multi"
+  },
   "contributors": [
+    {
+      "name":"Lennart Pegel",
+      "email":"github@justlep.net",
+      "url":"https://github.com/justlep/camo"
+    },
     {
       "name": "Scott Robinson",
       "email": "s.w.robinson@gmail.com",
@@ -37,10 +46,10 @@
     "query",
     "db"
   ],
-  "homepage": "https://github.com/justlep/camo",
+  "homepage": "https://github.com/AlexStormwood/camo-multi",
   "repository": {
     "type": "git",
-    "url": "https://github.com/justlep/camo.git"
+    "url": "https://github.com/AlexStormwood/camo-multi.git"
   },
   "license": "MIT",
   "dependencies": {
