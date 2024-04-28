@@ -1,6 +1,6 @@
 {
   "name": "@alexstormwood/camo-multi",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "A class-based Object-Document Mapper (ODM) for NeDB, with support for disconnecting and reconnecting to databases during an app's runtime.",
   "type": "module",
   "main": "index.js",

@@ -8,6 +8,28 @@ I barely have my head wrapped around the original Camo, and this fork - so I'm s
 
 I would appreciate the changes in this fork being pulled into a more-maintained repo - I really have no intention of doing anything more to this once the "multi connection" stuff that I need is implemented.
 
+## So, what does "multi" mean here?
+
+Basically, you are not locked into the first database that you connect to when using your app, in this version of Camo.
+
+You can call a `.close()` function on a client, disconnecting your current client.
+
+Then, you can connect to another database.
+
+Multi!
+
+I'm using this in my work to have one NeDB database per game save. 
+
+Players can play in World A, World A has a database for its persisted data. 
+
+Player can end their session in World A, and start up a new session in World B. World B has its own database, no data shared between World A and World B.
+
+This does mean that:
+
+- you must be aware of which database is active/connected
+- you must manually close your database and connect your database before doing database operations
+- you _should_ check for the current connected client instance to aid with the above
+- you _should_ have some seed data process if you do need to share any data between databases
 
 # A completely reworked fork of scottwrobinson's [camo](https://github.com/scottwrobinson/camo)
 

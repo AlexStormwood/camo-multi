@@ -1,6 +1,8 @@
 
 export {connect} from './lib/nedbclient.js';
-export {getClientInstance as getClient} from './lib/client.js';
+import {DatabaseClient as DatabaseClient} from './lib/client.js';
+let getClientInstance = DatabaseClient.getClientInstance;
+export {getClientInstance as getClient}; 
 export {Document} from './lib/document.js';
 export {EmbeddedDocument} from './lib/embedded-document.js';
 export {setUnknownDataKeyBehavior} from './lib/base-document.js';
