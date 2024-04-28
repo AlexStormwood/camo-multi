@@ -1,7 +1,16 @@
+# Oh god, another fork?!
+
+I know, I know.
+
+GitHub user `justlep` has a great fork, but I need to be able to reset the database client connection at certain points in the app.
+
+I barely have my head wrapped around the original Camo, and this fork - so I'm sure this will not be a reliable one to use.
+
+I would appreciate the changes in this fork being pulled into a more-maintained repo - I really have no intention of doing anything more to this once the "multi connection" stuff that I need is implemented.
+
+
 # A completely reworked fork of scottwrobinson's [camo](https://github.com/scottwrobinson/camo)
-[![Build Status](https://api.travis-ci.com/justlep/camo.svg?branch=master)](https://travis-ci.com/github/justlep/camo)
-[![NPM Version](https://img.shields.io/npm/v/@justlep/camo.svg)](https://www.npmjs.com/package/@justlep/camo)
-[![Node.js Version](https://img.shields.io/node/v/@justlep/camo.svg)]()
+
 
 Changes: 
 * Complete code refactoring & optimization
