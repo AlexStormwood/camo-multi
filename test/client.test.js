@@ -2,7 +2,7 @@ import {expect} from 'chai';
 import {Document} from '../lib/document.js';
 import {getData1, getData2, validateId, validateData1, Data} from './util.js';
 import {initMochaHooksForNedb} from './database.js';
-import {isNativeId} from '../lib/client.js';
+import {DatabaseClient} from '../lib/client.js';
 
 describe('Client', function () {
 
@@ -121,8 +121,8 @@ describe('Client', function () {
                 validateId(user);
                 return User.findOne({_id: user._id}, {populate: false});
             }).then(function (u) {
-                expect(isNativeId(u.pet)).to.be.true;
-                expect(isNativeId(u.address)).to.be.true;
+                expect(DatabaseClient.isNativeId(u.pet)).to.be.true;
+                expect(DatabaseClient.isNativeId(u.address)).to.be.true;
             }).then(done, done);
         });
 
@@ -154,7 +154,7 @@ describe('Client', function () {
                 return User.findOne({_id: user._id}, {populate: ['pet']});
             }).then(function (u) {
                 expect(u.pet).to.be.an.instanceof(Pet);
-                expect(isNativeId(u.address)).to.be.true;
+                expect(DatabaseClient.isNativeId(u.address)).to.be.true;
             }).then(done, done);
         });
     });
@@ -417,10 +417,10 @@ describe('Client', function () {
                 validateId(user2);
                 return User.find({}, {populate: false});
             }).then(function (users) {
-                expect(isNativeId(users[0].pet)).to.be.true;
-                expect(isNativeId(users[0].address)).to.be.true;
-                expect(isNativeId(users[1].pet)).to.be.true;
-                expect(isNativeId(users[1].address)).to.be.true;
+                expect(DatabaseClient.isNativeId(users[0].pet)).to.be.true;
+                expect(DatabaseClient.isNativeId(users[0].address)).to.be.true;
+                expect(DatabaseClient.isNativeId(users[1].pet)).to.be.true;
+                expect(DatabaseClient.isNativeId(users[1].address)).to.be.true;
             }).then(done, done);
         });
 
@@ -460,9 +460,9 @@ describe('Client', function () {
                 return User.find({}, {populate: ['pet']});
             }).then(function (users) {
                 expect(users[0].pet).to.be.an.instanceof(Pet);
-                expect(isNativeId(users[0].address)).to.be.true;
+                expect(DatabaseClient.isNativeId(users[0].address)).to.be.true;
                 expect(users[1].pet).to.be.an.instanceof(Pet);
-                expect(isNativeId(users[1].address)).to.be.true;
+                expect(DatabaseClient.isNativeId(users[1].address)).to.be.true;
             }).then(done, done);
         });
     });
