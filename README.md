@@ -1,3 +1,13 @@
+# DEPRECATED
+
+Please use this package, which was built from the ground up to facilitate an app running multiple NeDB database connections _concurrently_ instead of sequentially:
+
+## [https://github.com/BigfootDS/supercamo](https://github.com/BigfootDS/supercamo)
+
+<hr />
+<hr />
+<hr />
+
 # Oh god, another fork?!
 
 I know, I know.
