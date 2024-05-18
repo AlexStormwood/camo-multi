@@ -4,6 +4,8 @@ Please use this package, which was built from the ground up to facilitate an app
 
 ## [https://github.com/BigfootDS/supercamo](https://github.com/BigfootDS/supercamo)
 
+## npm i @bigfootds/supercamo
+
 <hr />
 <hr />
 <hr />
